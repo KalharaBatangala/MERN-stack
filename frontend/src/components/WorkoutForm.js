@@ -25,6 +25,13 @@ const WorkoutForm = () => {
         if(!response.ok) {
             setError(json.error)
         }
+        if(response.ok) {
+            setTitle('')
+            setLoad('')
+            setReps('')
+            setError(null)
+            console.log('New Workout added', json)
+        }
     }
 
 
