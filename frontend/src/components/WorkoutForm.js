@@ -8,7 +8,7 @@ const WorkoutForm = () => {
     const [error, setError] = useState(null)
     
     const handleSubmit = async(e) => {
-        e.preventDefault()
+        e.preventDefault()  //default is refresh the page. don't want to happen it
 
         const workout = {title , load, reps}
 
@@ -22,6 +22,7 @@ const WorkoutForm = () => {
 
         const json = await response.json()
 
+        //check for error
         if(!response.ok) {
             setError(json.error)
         }
