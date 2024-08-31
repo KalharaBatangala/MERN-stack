@@ -47,6 +47,7 @@ const WorkoutForm = () => {
             <label>Reps :</label>
             <input type='number' onChange={(e) => setReps(e.target.value)} value={reps} />
             <button>Add workout</button>
+            {error && <div className='error'>{error}</div>}
         </form>
     )
 }
