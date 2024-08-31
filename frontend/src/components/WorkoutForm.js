@@ -50,3 +50,5 @@ const WorkoutForm = () => {
         </form>
     )
 }
+
+export default WorkoutForm
