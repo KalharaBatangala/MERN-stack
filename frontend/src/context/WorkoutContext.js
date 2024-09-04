@@ -13,6 +13,8 @@ export const workoutsReducer = (state, action) => {
             return {
                 workouts: [action.payload, ...state.workouts]
             }
+        default:
+            return state
     }
 }
 
@@ -28,7 +30,7 @@ export const WorkoutsContextProvider = ({children}) => {
     
 
     return (
-        <WorkoutsContext.Provider >
+        <WorkoutsContext.Provider value={{state, dispatch}} >
             {children}
         </WorkoutsContext.Provider>
     )
